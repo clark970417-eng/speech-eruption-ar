@@ -1,6 +1,6 @@
 {
   "name": "Speech Eruption AR",
-  "description": "An AR camera effect where words erupt from your mouth based on speech volume, powered by MediaPipe for tracking and Gemini for creative word generation.",
+  "description": "An interactive word effect for school broadcasts using real-time face tracking and audio analysis.",
   "requestFramePermissions": [
     "camera",
     "microphone"

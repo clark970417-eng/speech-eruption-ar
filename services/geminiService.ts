@@ -41,7 +41,7 @@ export const generateWordList = async (prompt: string): Promise<string[]> => {
     return [];
 
   } catch (error) {
-    console.error("Gemini generation error:", error);
+    console.error("Word-list generation error:", error);
     throw error;
   }
 };
