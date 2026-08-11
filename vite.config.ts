@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
             name: 'Speech Eruption AR',
             short_name: 'SpeechAR',
             description:
-              'An AR camera effect where words erupt from your mouth based on speech volume, powered by MediaPipe for tracking and Gemini for creative word generation.',
+              'An interactive word effect for school broadcasts using real-time face tracking and audio analysis.',
             theme_color: '#0f0f11',
             background_color: '#0f0f11',
             start_url: '/',

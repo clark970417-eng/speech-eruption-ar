@@ -218,7 +218,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
 
         <hr className="border-gray-700" />
 
-        {/* Gemini Generator */}
+        {/* Optional word-list helper */}
         <div className="space-y-2 opacity-90">
           <label className="text-xs font-semibold text-gray-300 flex items-center gap-1">
             <span className="text-pink-400">✨ Random Word Generator</span>

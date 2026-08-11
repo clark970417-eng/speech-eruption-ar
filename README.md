@@ -19,7 +19,7 @@ The application uses the camera to locate the speaker's face and mouth, while th
 - Animated word particles with configurable motion, gravity, scale, and lifetime
 - Fixed-text mode for planned announcements
 - Editable word lists for different broadcast themes
-- Optional themed word suggestions using the Gemini API
+- Optional theme-based word-list helper
 - Camera switching and visual controls for different presentation environments
 - Progressive Web App support for installation on compatible devices
 
@@ -29,7 +29,6 @@ The application uses the camera to locate the speaker's face and mouth, while th
 - Vite
 - MediaPipe Tasks Vision
 - Web Audio API and Canvas-based animation
-- Gemini API for the optional themed-word feature
 - Vite PWA
 
 ## Run Locally
@@ -44,21 +43,18 @@ The application uses the camera to locate the speaker's face and mouth, while th
 
 ```bash
 npm install
+npm run dev
 ```
 
-The themed-word feature requires an API key. Create `.env.local` only if that optional feature will be used:
+Open the local address displayed by Vite and allow camera and microphone access when prompted. The core camera effect, face tracking, audio response, fixed-text mode, and editable word lists do not require an API key.
+
+### Optional Word-List Helper
+
+An optional helper can create themed word lists through the Gemini API. To enable only this extension, create `.env.local`:
 
 ```env
 GEMINI_API_KEY=your_api_key_here
 ```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open the local address displayed by Vite and allow camera and microphone access when prompted.
 
 ## Production Build
 
