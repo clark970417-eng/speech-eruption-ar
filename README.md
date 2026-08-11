@@ -1,20 +1,72 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Speech Eruption AR
 
-# Run and deploy your AI Studio app
+An interactive camera experience developed for school broadcasts and creative presentations.
 
-This contains everything you need to run your app locally.
+**Author:** Clark
 
-View your app in AI Studio: https://ai.studio/apps/drive/13ybdPzL2YFxmzmf_6mJb3itSlxt8EYmv
+## Purpose
+
+School announcements are usually informative but visually static. I developed Speech Eruption AR to make live broadcasts more expressive by connecting a presenter's voice and facial movement to animated words on screen. The project explores how browser-based computer vision, audio analysis, and real-time graphics can support more engaging school communication.
+
+## How It Works
+
+The application uses the camera to locate the speaker's face and mouth, while the microphone provides a live volume signal. When the speaker opens their mouth and speaks, words and symbols are emitted from the detected mouth position. Their size and motion respond to the strength of the audio signal.
+
+## Features
+
+- Real-time face and mouth tracking with MediaPipe
+- Microphone volume analysis through the Web Audio API
+- Animated word particles with configurable motion, gravity, scale, and lifetime
+- Fixed-text mode for planned announcements
+- Editable word lists for different broadcast themes
+- Optional themed word suggestions using the Gemini API
+- Camera switching and visual controls for different presentation environments
+- Progressive Web App support for installation on compatible devices
+
+## Technical Stack
+
+- React and TypeScript
+- Vite
+- MediaPipe Tasks Vision
+- Web Audio API and Canvas-based animation
+- Gemini API for the optional themed-word feature
+- Vite PWA
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+### Requirements
 
+- Node.js 18 or later
+- npm
+- A browser with camera and microphone support
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Setup
+
+```bash
+npm install
+```
+
+The themed-word feature requires an API key. Create `.env.local` only if that optional feature will be used:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local address displayed by Vite and allow camera and microphone access when prompted.
+
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Privacy and Presentation Notes
+
+Camera frames and microphone input are processed in the browser for the live effect. Presenters should still obtain permission before recording or streaming participants, and should test lighting, framing, microphone sensitivity, and background visibility before a school broadcast.
