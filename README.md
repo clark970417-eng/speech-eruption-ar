@@ -2,8 +2,6 @@
 
 An interactive camera experience developed for school broadcasts and creative presentations.
 
-**Author:** Clark
-
 ## Purpose
 
 School announcements are usually informative but visually static. I developed Speech Eruption AR to make live broadcasts more expressive by connecting a presenter's voice and facial movement to animated words on screen. The project explores how browser-based computer vision, audio analysis, and real-time graphics can support more engaging school communication.
